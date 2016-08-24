@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "check_HTTP_proxy": {
+      "command": "${PLUGINS_DIR}/basic/check-http.rb -u http://proxy --response-code ###NGINX_RESPONSE_CODE###",
+      "handlers": [
+        "mailer"
+      ],
+      "subscribers": [
+        "proxy"
+      ],
+      "interval": 60
+    }
+  }
+}
